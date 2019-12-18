@@ -1,0 +1,28 @@
+@import '../variables.scss';
+
+#resume {
+    padding: 5%;
+
+    h2 {
+        color: $secondary-color-light;
+        border-bottom: 1px dashed mix($secondary-color-light, $secondary-color, 40);
+        padding-bottom: 10px;
+    }
+
+    #experience {
+        color: $secondary-color-light;
+
+        #timeline {
+            margin-left: 20px;
+
+            & > li {
+                list-style-type: none;
+
+                & > .date-container {
+                    width: 130px;
+                    border-right: 2px solid $secondary-color-light;
+                }
+            }
+        }
+    }
+}

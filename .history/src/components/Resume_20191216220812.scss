@@ -1,0 +1,36 @@
+@import '../variables.scss';
+
+#resume {
+    padding: 5%;
+
+    h2 {
+        color: $secondary-color-light;
+        border-bottom: 1px dashed mix($secondary-color-light, $secondary-color, 40);
+        padding-bottom: 10px;
+    }
+
+    #experience {
+        color: $secondary-color-light;
+
+        #timeline {
+            margin-left: 20px;
+            border-left: 2px solid $secondary-color-light;
+
+            & > li {
+                list-style-type: none;
+
+                &::before {
+                    content: '◉';
+                    font-size: 1.5rem;
+                    line-height: 1rem;
+                    margin-left: -27px;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .details {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.ReactSnapScroll {
+  height: 100vh;
+}
+
+.row {
+  margin: 0 !important;
+}
+
+.full-height-table-cell {
+  height: 100vh;
+  display: table-cell;
+  vertical-align: bottom;
+}
+
+.banner {
+  height: 100%;
+  background-color: rgb(63, 138, 236);
+
+  .banner-text > div {
+    position: absolute;
+    right: 0;
+    width: 50vw;
+  }
+}

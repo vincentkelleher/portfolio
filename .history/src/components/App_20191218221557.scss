@@ -1,0 +1,18 @@
+.full-height {
+  height: 100vh;
+}
+
+.snap-scroll-container {
+  overflow: scroll;
+  scroll-snap-type: mandatory;
+  scroll-snap-type: y mandatory;
+}
+
+.snap-scroll-section {
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.row {
+  margin: 0 !important;
+}

@@ -1,0 +1,11 @@
+@import '../variables.scss';
+
+#resume {
+    padding: 5%;
+
+    h2 {
+        color: $secondary-color-light;
+        border-bottom: 3px dotted mix($secondary-color-light, $secondary-color, 40);
+        padding-bottom: 10px;
+    }
+}

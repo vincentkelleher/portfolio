@@ -1,0 +1,11 @@
+@import '../variables.scss';
+
+#resume {
+    padding: 5%;
+
+    h2 {
+        color: $secondary-color-light;
+        border-bottom: 1px solid mix($secondary-color-light, $secondary-color, 20);
+        padding-bottom: 10px;
+    }
+}
