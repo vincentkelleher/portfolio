@@ -4,21 +4,13 @@ import './Experience.scss';
 class ExperienceDate extends React.Component {
 
     render() {
-        return (<div>{ this.props.value }</div>);
-    }
-}
-
-class ExperienceCompany extends React.Component {
-
-    render() {
-        return (<>{ this.props.value }</>);
+        return (<div className="date">{ this.props.value }</div>);
     }
 }
 
 class ExperienceTimeline extends React.Component {
 
     static Date = ExperienceDate;
-    static Company = ExperienceCompany;
 
     render() {
         return (
@@ -30,6 +22,13 @@ class ExperienceTimeline extends React.Component {
                 }
             </div>
         );
+    }
+}
+
+class ExperienceCompany extends React.Component {
+
+    render() {
+        return (<div className="company">{ this.props.value }</div>);
     }
 }
 
@@ -84,6 +83,7 @@ class ExperienceTechnology extends React.Component {
 export default class Experience extends React.Component {
 
     static Timeline = ExperienceTimeline;
+    static Company = ExperienceCompany;
     static Project = ExperienceProject;
     static Position = ExperiencePosition;
     static Description = ExperienceDescription;

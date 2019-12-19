@@ -7,7 +7,7 @@ import Resume from './Resume';
 export default () => {
 
   return (
-    <Container fluid="true" className="p-0 full-height snap-scroll-container">
+    <Container fluid="true" className="p-0 full-height snap-scroll-container no-horizontal-scroll">
       <Banner></Banner>
       <Resume></Resume>
     </Container>
