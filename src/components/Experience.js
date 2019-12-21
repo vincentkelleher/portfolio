@@ -1,29 +1,6 @@
 import React from 'react';
+import { Row, Col } from 'react-bootstrap';
 import './Experience.scss';
-
-class ExperienceDate extends React.Component {
-
-    render() {
-        return (<div className="date">{ this.props.value }</div>);
-    }
-}
-
-class ExperienceTimeline extends React.Component {
-
-    static Date = ExperienceDate;
-
-    render() {
-        return (
-            <div className="left-container">
-                {
-                    React.Children.map(this.props.children, child => {
-                        return React.cloneElement(child, { value: child.props.children });
-                    })
-                }
-            </div>
-        );
-    }
-}
 
 class ExperienceCompany extends React.Component {
 
@@ -82,7 +59,6 @@ class ExperienceTechnology extends React.Component {
 
 export default class Experience extends React.Component {
 
-    static Timeline = ExperienceTimeline;
     static Company = ExperienceCompany;
     static Project = ExperienceProject;
     static Position = ExperiencePosition;
@@ -92,21 +68,10 @@ export default class Experience extends React.Component {
 
     render() {     
         return (
-            <div className="timeline">
-                {
-                    React.Children.map(this.props.children, child => {
-                        if (child.type === ExperienceTimeline) {
-                            return React.cloneElement(child, { children: child.props.children });
-                        }
-                    })
-                }
-                <div className="details">
+            <Row className="timeline snap-scroll-section">
+                <Col lg="12" className="details">
                     {
                         React.Children.map(this.props.children, child => {
-                            if (child.type === ExperienceTimeline) {
-                                return;
-                            }
-
                             if (child.type === ExperienceStack) {
                                 return React.cloneElement(child, { items: child.props.children });
                             }
@@ -114,8 +79,8 @@ export default class Experience extends React.Component {
                             return React.cloneElement(child, { value: child.props.children });
                         })
                     }
-                </div>
-            </div>
+                </Col>
+            </Row>
         );
     }    
 }

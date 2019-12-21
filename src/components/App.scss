@@ -6,11 +6,18 @@
   overflow-x: hidden;
 }
 
-.snap-scroll-container {
+.snap-y-scroll-container {
   overflow-y: scroll;
   scroll-snap-type: mandatory;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
+}
+
+.snap-x-scroll-container {
+  overflow-x: scroll;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vw);
+  scroll-snap-type: x mandatory;
 }
 
 .snap-scroll-section {
