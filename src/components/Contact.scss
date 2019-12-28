@@ -1,0 +1,67 @@
+@import '../variables.scss';
+@import '~bootstrap/scss/bootstrap-grid.scss';
+
+#contact {
+    background-color: $ternary-color;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    & a {
+        color: $secondary-color;
+        text-decoration: underline;
+    }
+
+    & h1 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    & > svg {
+        position: absolute;
+
+        & > path {
+            stroke-linejoin: round;
+            stroke-linecap: round;
+            fill: white;
+        }
+    }
+
+    & #contact-text {
+
+        @include media-breakpoint-up(lg) {
+            text-align: right;
+            margin-right: 5%;
+
+            & > h1 {
+                font-size: 3rem;
+            }
+        }
+    
+        @include media-breakpoint-down(md) {
+            text-align: center;
+
+            & > h1 {
+                font-size: 2.25rem;
+            }
+        }
+
+        & > #contact-questions {
+            overflow: hidden;
+
+            & > .letter {
+                display: inline-block;
+            }
+        }
+    }
+
+    & #contact-email  {
+        @include media-breakpoint-up(lg) {
+            font-size: 1.75rem !important;
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: 1.4rem !important;
+        }
+    }
+}

@@ -101,6 +101,7 @@
     }
     
     & > span {
+      display: inline-block;
       font-size: 0.90rem;
       color: darken(white, 3%);
       padding-left: 8px;

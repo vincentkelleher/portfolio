@@ -66,9 +66,9 @@ export default class Experience extends React.Component {
     static Stack = ExperienceStack;
     static Technology = ExperienceTechnology;
 
-    render() {     
+    render() {          
         return (
-            <Row className="timeline snap-scroll-section">
+            <Row id={this.props.id} className="timeline snap-scroll-section">
                 <Col lg="12" className="details">
                     {
                         React.Children.map(this.props.children, child => {

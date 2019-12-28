@@ -1,0 +1,32 @@
+@import '../variables.scss';
+@import '~bootstrap/scss/bootstrap-grid.scss';
+
+#footer {
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+
+  & > div {
+    font-size: 0.80rem;
+    color: $secondary-color;
+
+    @include media-breakpoint-up(lg) {
+      text-align: right;
+    }
+
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
+
+    & #heart {
+      display: inline-block;
+    }
+
+    & > span > a {
+      color: $secondary-color;
+      text-decoration: underline;
+    }
+  }
+}
